@@ -32,7 +32,7 @@ public class FlickrAPI
 
     public String getJson(String text , boolean flag ) throws IOException
     {
-        String strUrl =FlickrURL.getImageUrl(200, text);
+        String strUrl =FlickrURL.getImageUrl(100, text);
         if (flag)
         {
             strUrl = FlickrURL.getImageInfoUrl(text);

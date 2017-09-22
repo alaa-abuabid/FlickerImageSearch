@@ -14,7 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
 
+import javax.net.ssl.HttpsURLConnection;
 
 
 public class DescriptionFragment extends Fragment
@@ -38,7 +44,7 @@ public class DescriptionFragment extends Fragment
     public void onStart()
     {
         super.onStart();
-        IntentFilter intentFilter = new IntentFilter(HttpRequestHandler.ACTION);
+        IntentFilter intentFilter = new IntentFilter(HttpDescreption.ACTION);
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(receiver,intentFilter);
 
     }
@@ -48,7 +54,7 @@ public class DescriptionFragment extends Fragment
         @Override
         public void onReceive(Context context, Intent intent)
         {
-         String desc = intent.getStringExtra("desc");
+            String desc = intent.getStringExtra("desc");
             imageObject.setInfo(desc);
         }
     };

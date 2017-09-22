@@ -51,8 +51,6 @@ public class HttpRequestHandler extends IntentService {
             while (loadCount<images.length)
             {
                 Images[] temp = api.getBitmapImage(getbatch());
-                fullImages.addAll(Arrays.asList(temp));
-                adapter.setImagesArrayList(fullImages);
                 Intent intentValue = new Intent(ACTION);
                 intentValue.putExtra("update","update");
                 intentValue.putExtra("list",temp);
