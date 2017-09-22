@@ -68,7 +68,7 @@ public class FlickrAPI
     {
         for (Images i:photo)
         {
-            String FlickrPhotoPath = "http://farm" + i.getFarm()+ ".static.flickr.com/" + i.getServer() + "/" + i.getId() + "_" + i.getSecret() + "_m.jpg";
+            String FlickrPhotoPath = "http://farm" + i.getFarm()+ ".static.flickr.com/" + i.getServer() + "/" + i.getId() + "_" + i.getSecret() + "_b.jpg";
 
             URL FlickrPhotoUrl = null;
 
